@@ -1,4 +1,4 @@
-# Taintcraft Issues
+# Crimson Craft Repository
 
-This is an empty repository utilized for issue tracking the
-Taintcraft Minecraft Server.
+This is a repository utilized for issue tracking, documentation, etc. of 
+the Crimson Craft Minecraft Server.
