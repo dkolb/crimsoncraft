@@ -1,0 +1,18 @@
+plugins\CoreProtect\database.db
+plugins\DiscordSRV
+plugins\dynmap\web
+plugins\Essentials\userdata
+plugins\Essentials\warps
+plugins\Essentials\usermap.csv
+plugins\LuckPerms\luckperms-h2.mv.db
+plugins\Multiverse-Inventories\groups
+plugins\Multiverse-Inventories\players
+plugins\Multiverse-Inventories\worlds
+plugins\Multiverse-Portals\portals.yml
+cache
+logs
+iconstage
+farmtest_world
+Taintcraft (World 1)*
+crash-reports
+.console-history
