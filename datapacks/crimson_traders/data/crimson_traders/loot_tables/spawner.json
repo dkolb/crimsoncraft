@@ -1,0 +1,19 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:air",
+                    "weight": 3
+                },
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "crimson_traders:spawner_success",
+                    "weight": 1
+                }
+            ]
+        }
+    ]
+}

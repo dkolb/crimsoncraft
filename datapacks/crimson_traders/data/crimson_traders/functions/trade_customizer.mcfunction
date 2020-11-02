@@ -1,0 +1,2 @@
+function crimson_traders:add_spawner_trade
+tag @s add CrimsonTraderModifiedTrade

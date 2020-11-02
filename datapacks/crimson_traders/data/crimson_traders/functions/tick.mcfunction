@@ -1,0 +1,1 @@
+execute as @e[type=minecraft:wandering_trader,limit=1,tag=!CrimsonTraderModifiedTrade] run function crimson_traders:trade_customizer

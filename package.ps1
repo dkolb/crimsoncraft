@@ -1,4 +1,4 @@
-Push-Location .\crimsontint-dev
+Push-Location .\dev-server
 
 $7z = "C:\Program Files\7-Zip\7z.exe"
 

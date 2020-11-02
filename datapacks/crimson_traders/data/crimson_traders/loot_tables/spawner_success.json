@@ -1,0 +1,75 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:spawner",
+                    "weight": 500,
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{sellTag:{display:{Name:'{\"text\":\"Zombie Spawner\",\"italic\":false}',Lore:['[{\"text\":\"Place carefully. Cannot be mined.\"}]']},BlockEntityTag:{SpawnData:{id:\"minecraft:zombie\"},SpawnPotentials:[{Entity:{id:\"minecraft:zombie\"}}]}},maxUses:1,buy:{id:\"minecraft:emerald\",Count:20b},TradeOffer:1b}"
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "minecraft:spawner",
+                    "weight": 222,
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{sellTag:{display:{Name:'{\"text\":\"Skeleton Spawner\",\"italic\":false}',Lore:['[{\"text\":\"Place carefully. Cannot be mined.\"}]']},BlockEntityTag:{SpawnData:{id:\"minecraft:skeleton\"},SpawnPotentials:[{Entity:{id:\"minecraft:skeleton\"}}]}},maxUses:1,buy:{id:\"minecraft:emerald\",Count:20b},TradeOffer:1b}"
+                        }
+                    ]
+               },
+               {
+                   "type": "item",
+                   "name": "minecraft:spawner",
+                   "weight": 111,
+                   "functions": [
+                       {
+                           "function": "minecraft:set_nbt",
+                            "tag": "{sellTag:{display:{Name:'{\"text\":\"Spider Spawner\",\"italic\":false}',Lore:['[{\"text\":\"Place carefully. Cannot be mined.\"}]']},BlockEntityTag:{SpawnData:{id:\"minecraft:spider\"},SpawnPotentials:[{Entity:{id:\"minecraft:spider\"}}]}},maxUses:1,buy:{id:\"minecraft:emerald\",Count:20b},TradeOffer:1b}"
+                       }
+                   ]
+               },
+               {
+                   "type": "item",
+                   "name": "minecraft:spawner",
+                   "weight": 111,
+                   "functions": [
+                       {
+                           "function": "minecraft:set_nbt",
+                            "tag": "{sellTag:{display:{Name:'{\"text\":\"Cave Spider Spawner\",\"italic\":false}',Lore:['[{\"text\":\"Place carefully. Cannot be mined.\"}]']},BlockEntityTag:{SpawnData:{id:\"minecraft:cave_spider\"},SpawnPotentials:[{Entity:{id:\"minecraft:cave_spider\"}}]}},maxUses:1,buy:{id:\"minecraft:emerald\",Count:20b},TradeOffer:1b}"
+                       }
+                   ]
+               },
+               {
+                   "type": "item",
+                   "name": "minecraft:spawner",
+                   "weight": 50,
+                   "functions": [
+                       {
+                           "function": "minecraft:set_nbt",
+                            "tag": "{sellTag:{display:{Name:'{\"text\":\"Creeper Spawner\",\"italic\":false}',Lore:['[{\"text\":\"Place carefully. Cannot be mined.\"}]']},BlockEntityTag:{SpawnData:{id:\"minecraft:creeper\"},SpawnPotentials:[{Entity:{id:\"minecraft:creeper\"}}]}},maxUses:1,buy:{id:\"minecraft:emerald\",Count:20b},TradeOffer:1b}"
+                       }
+                   ]
+               },
+               {
+                   "type": "item",
+                   "name": "minecraft:spawner",
+                   "weight": 1,
+                   "functions": [
+                       {
+                           "function": "minecraft:set_nbt",
+                            "tag": "{sellTag:{display:{Name:'{\"text\":\"Pig Spawner\",\"italic\":false}',Lore:['[{\"text\":\"More pigs than a certain adult site ending in Hub!\"}]']},BlockEntityTag:{SpawnData:{id:\"minecraft:pig\"},SpawnPotentials:[{Entity:{id:\"minecraft:pig\"}}]}},maxUses:1,buy:{id:\"minecraft:emerald\",Count:20b},TradeOffer:1b}"
+                       }
+                   ]
+               }
+            ]
+        }
+    ]
+}
