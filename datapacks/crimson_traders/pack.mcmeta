@@ -1,0 +1,18 @@
+{
+    "pack": {
+        "pack_format": 6,
+        "description": [
+            {
+                "text": "Crimson Traders",
+                "color": "dark_aqua"
+            },
+            {
+                "text": "\n"
+            },
+            {
+                "text":"Version 1.0.0",
+                "color":"yellow"
+            }
+        ]
+    }
+}

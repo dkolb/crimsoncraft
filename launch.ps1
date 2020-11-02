@@ -10,7 +10,7 @@ $path = (
 $env:PATH = $path
 $env:JAVA_HOME = 'C:\Program Files\Java\jdk-14.0.1'
 
-Push-Location -Path ".\crimsontint-dev"
+Push-Location -Path ".\dev-server"
 
 java -Xms10G `
     -Xmx10G `
@@ -32,6 +32,6 @@ java -Xms10G `
     -XX:SurvivorRatio=32 `
     -XX:+PerfDisableSharedMem `
     -XX:MaxTenuringThreshold=1 `
-    -jar .\1.16.2-r6.jar nogui
+    -jar $args[0] nogui
 
 Pop-Location

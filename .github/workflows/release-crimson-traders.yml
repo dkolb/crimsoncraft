@@ -1,0 +1,52 @@
+name: 'Release Crimson Traders Datapack'
+on:
+  push:
+    tags: 'crimson_traders*'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get Version From Tag
+        id: version
+        run: echo "::set-output name=version::${GITHUB_REF#refs/tags/crimson_traders_v}"
+        shell: bash
+      - name: Get File Name From Tag
+        id: file_name
+        run: echo "::set-output name=file_name::${GITHUB_REF#refs/tags/}.zip"
+        shell: bash
+      - name: Checkout Code
+        uses: actions/checkout@v2
+      - name: Zip Datapack
+        uses: thedoctor0/zip-release@master
+        with:
+          filename: ${{ steps.file_name.outputs.file_name }}
+          directory: datapacks/crimson_traders/
+          type: zip
+      - name: Get Changelog Entry
+        id: changelog_reader
+        uses: mindsers/changelog-reader-action@v2.0.0
+        with:
+          validation_depth: 10
+          version: ${{ steps.version.outputs.version }}
+          path: ./datapacks/crimson_traders/CHANGELOG.md
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ steps.changelog_reader.outputs.version }}
+          body: ${{ steps.changelog_reader.outputs.changes }}
+          prerelease: ${{ steps.changelog_reader.outputs.status == 'prereleased' }}
+          draft: ${{ steps.changelog_reader.outputs.status == 'unreleased' }}
+      - name: Upload Release
+        id: upload_release
+        uses: actions/upload-release-asset@v1.0.2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./datapacks/crimson_traders/${{steps.file_name.outputs.file_name }}
+          asset_name: ${{steps.file_name.outputs.file_name }}
+          asset_content_type: application/zip
