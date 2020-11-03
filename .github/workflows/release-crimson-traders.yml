@@ -24,7 +24,7 @@ jobs:
           type: zip
       - name: Get Changelog Entry
         id: changelog_reader
-        uses: minders/changelog-reader-action@v2
+        uses: mindsers/changelog-reader-action@v2.0.0
         with:
           validation_depth: 10
           version: ${{ steps.version.outputs.version }}
