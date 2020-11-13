@@ -1,4 +1,4 @@
-name: 'Release Crimson Traders Datapack'
+name: 'Release Creeper Grief Rule Fabric Mod'
 on:
   push:
     tags: 'creeper_grief_rule*'
@@ -50,3 +50,4 @@ jobs:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: ./creepergriefrule/build/libs/creeper_grief_rule-${{ steps.version.outputs.version }}.jar
           asset_name: creeper_grief_rule-${{ steps.version.outputs.version }}.jar
+          asset_content_type: application/java-archive
