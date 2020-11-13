@@ -3,7 +3,7 @@
     "id": "creeper_grief_rule",
     "version": "${version}",
 
-    "name": "Creeper Greif Rule",
+    "name": "Creeper Grief Rule",
     "description": "Provides a mobGriefingCreeper rule to disable creeper explosions.",
     "icon": "assets/creeper_grief_rule/icon.png",
     "authors": ["David Kolb <david.c.kolb@gmail.com>"],
