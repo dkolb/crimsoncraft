@@ -1,0 +1,52 @@
+name: 'Release Crimson Traders Datapack'
+on:
+  push:
+    tags: 'creeper_grief_rule*'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get Version From Tag
+        id: version
+        run: echo "::set-output name=version::${GITHUB_REF#refs/tags/creeper_grief_rule_v}"
+        shell: bash
+      - name: Get File Name From Tag
+        id: file_name
+        run: echo "::set-output name=file_name::${GITHUB_REF#refs/tags/}.jar"
+        shell: bash
+      - name: Checkout Code
+        uses: actions/checkout@v2
+      - name: Setup Java
+        uses: actions/setup-java@v1
+        with:
+          java-version: 8
+      - name: Build with Gradle
+        run: ./gradlew clean remapJar
+        working-directory: ./creeper_grief_rule
+      - name: Get Changelog Entry
+        id: changelog_reader
+        uses: mindsers/changelog-reader-action@v2.0.0
+        with:
+          validation_depth: 10
+          version: ${{ steps.version.outputs.version }}
+          path: ./creeper_grief_rule/CHANGELOG.md
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ steps.changelog_reader.outputs.version }}
+          body: ${{ steps.changelog_reader.outputs.changes }}
+          prerelease: ${{ steps.changelog_reader.outputs.status == 'prereleased' }}
+          draft: ${{ steps.changelog_reader.outputs.status == 'unreleased' }}
+      - name: Upload Release
+        id: upload_release
+        uses: actions/upload-release-asset@v1.0.2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./creepergriefrule/build/libs/creeper_grief_rule-${{ steps.version.outputs.version }}.jar
+          asset_name: creeper_grief_rule-${{ steps.version.outputs.version }}.jar

@@ -1,0 +1,4 @@
+{
+    "gamerule.mobGriefingCreeper": "Allow creepers explosions to destroy blocks.",
+    "gamerule.mobGriefingCreeper.description": "If this is true, Creepers will destroy blocks."
+}

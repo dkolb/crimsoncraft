@@ -1,0 +1,14 @@
+{
+    "required": true,
+    "package": "com.krinchan.minecraft.creepergriefrule.mixin",
+    "plugin": "com.krinchan.minecraft.creepergriefrule.mixin.MixinConfigPlugin",
+    "compatibilityLevel": "JAVA_8",
+    "mixins": [
+        "BooleanRuleAccessor",
+        "GameRulesMixins"
+    ],
+    "injectors": {
+        "defaultRequire": 1
+    },
+    "mixinPriority": 1623
+}

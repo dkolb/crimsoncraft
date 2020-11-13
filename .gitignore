@@ -1,2 +1,27 @@
-crimsontint-dev
 *.zip
+dev-server/
+
+
+# Gradle
+creepergriefrule/.gradle/
+creepergriefrule/gradle/
+creepergriefrule/build/
+creepergriefrule/out/
+creepergriefrule/classes/
+
+# Idea
+creepergriefrule/.idea/
+creepergriefrule/*.iml
+creepergriefrule/*.ipr
+creepergriefrule/*.iws
+
+# VSCode
+creepergriefrule/.settings/
+creepergriefrule/.vscode/*
+!creepergriefrule/.vscode/tasks.json
+creepergriefrule/bin/
+creepergriefrule/.classpath
+creepergriefrule/.project
+
+# Fabric
+creepergriefrule/run/

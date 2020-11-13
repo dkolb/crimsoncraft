@@ -1,0 +1,20 @@
+{
+    "schemaVersion": 1,
+    "id": "creeper_grief_rule",
+    "version": "${version}",
+
+    "name": "Convenient mobGriefing",
+    "description": "Splits the mobGriefing gamerule into 4 gamerules for more convenience",
+    "icon": "assets/creeper_grief_rule/icon.png",
+    "authors": ["David Kolb <david.c.kolb@gmail.com>"],
+    "contact": {
+        "homepage": "https://github.com/dkolb/creepergreifrule",
+        "sources": "https://github.com/dkolb/creepergreifrule"
+    },
+    "license": "LGPL-3.0-or-later",
+
+    "environment": "*",
+    "mixins": [
+        "creeper_grief_rule.mixins.json"
+    ]
+}

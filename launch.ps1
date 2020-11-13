@@ -32,6 +32,6 @@ java -Xms10G `
     -XX:SurvivorRatio=32 `
     -XX:+PerfDisableSharedMem `
     -XX:MaxTenuringThreshold=1 `
-    -jar $args[0] nogui
+    -jar fabric-server-launch.jar
 
 Pop-Location
