@@ -3,13 +3,13 @@
     "id": "creeper_grief_rule",
     "version": "${version}",
 
-    "name": "Convenient mobGriefing",
-    "description": "Splits the mobGriefing gamerule into 4 gamerules for more convenience",
+    "name": "Creeper Greif Rule",
+    "description": "Provides a mobGriefingCreeper rule to disable creeper explosions.",
     "icon": "assets/creeper_grief_rule/icon.png",
     "authors": ["David Kolb <david.c.kolb@gmail.com>"],
     "contact": {
-        "homepage": "https://github.com/dkolb/creepergreifrule",
-        "sources": "https://github.com/dkolb/creepergreifrule"
+        "homepage": "https://github.com/dkolb/crimsoncraft",
+        "sources": "https://github.com/dkolb/crimsoncraft"
     },
     "license": "LGPL-3.0-or-later",
 
