@@ -37,7 +37,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: ${{ github.ref }}
-          release_name: Release ${{ steps.changelog_reader.outputs.version }}
+          release_name: Creeper Grief Rule Release ${{ steps.changelog_reader.outputs.version }}
           body: ${{ steps.changelog_reader.outputs.changes }}
           prerelease: ${{ steps.changelog_reader.outputs.status == 'prereleased' }}
           draft: ${{ steps.changelog_reader.outputs.status == 'unreleased' }}
@@ -48,6 +48,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./creepergriefrule/build/libs/creeper_grief_rule-${{ steps.version.outputs.version }}.jar
+          asset_path: ./creeper_grief_rule/build/libs/creeper_grief_rule-${{ steps.version.outputs.version }}.jar
           asset_name: creeper_grief_rule-${{ steps.version.outputs.version }}.jar
           asset_content_type: application/java-archive
