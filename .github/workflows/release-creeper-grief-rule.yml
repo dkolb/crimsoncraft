@@ -21,7 +21,7 @@ jobs:
         with:
           java-version: 8
       - name: Build with Gradle
-        run: ./gradlew clean remapJar
+        run: chmod +x ./gradlew && ./gradlew clean remapJar
         working-directory: ./creeper_grief_rule
       - name: Get Changelog Entry
         id: changelog_reader
