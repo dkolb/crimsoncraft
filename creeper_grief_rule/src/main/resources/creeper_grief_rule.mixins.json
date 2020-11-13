@@ -5,7 +5,8 @@
     "compatibilityLevel": "JAVA_8",
     "mixins": [
         "BooleanRuleAccessor",
-        "GameRulesMixins"
+        "GameRulesMixins",
+        "RulesImpl$Creeper$CreeperEntityMixin"
     ],
     "injectors": {
         "defaultRequire": 1
